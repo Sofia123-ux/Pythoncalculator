@@ -1,0 +1,12 @@
+num_1 = int(input("Enter first number: \t"))
+calculator= input("calculator: ")
+num_2 = int(input("Enter second number: \t"))
+
+if calculator == '+':
+    print("Result", num_1 + num_2)
+elif calculator == "-":
+    print("Result", num_1 - num_2)
+elif calculator == "*":
+    print("Result", num_1 * num_2)       
+elif calculator == "/":
+    print("Result", num_1 / num_2) 
