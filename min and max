@@ -1,0 +1,17 @@
+a = int(input("Enter number A: "))
+b = int(input("Enter number B: "))   
+c = int(input("Enter number C: "))
+d = int(input("Enter number D: "))
+q = int(input("Enter number Q: "))
+if a > b and a > c and a > d and a > q:
+    print("A is the max")
+elif b > a and b > c and b > d and b > q:
+    print("B is the max")
+elif c > a and c > b and c > d and c > q:
+    print("C is the max")
+elif d > a and d > b and d > c and d > q:
+    print("D ist the max")
+elif q > a and q > b and q > c and q > d:
+    print("Q is the max")
+else:
+    print("unknow") 
