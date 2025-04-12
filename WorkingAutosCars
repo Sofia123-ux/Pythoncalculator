@@ -1,0 +1,34 @@
+exit = 1 
+
+Auto = ["Toyota", "Audi","BMW"]
+while exit != 0:
+    choise = int(input("1. Add car\n2. Remove car\n3. Insert\n4. Sort\n5. Pop\n6. Reverse\n7. Rename\n0. Exit\n-->"))
+    if choise == 1:
+        print("Add car")
+        cars = input("Enter car name: ")
+        Auto.append(cars)
+        print(Auto)
+    elif choise == 2:
+        print("Remove car")
+        cars = input("Enter car name: ")
+        Auto.remove(cars)
+        print("Auto: ", Auto)
+    elif choise == 3:
+        print("Insert car")
+        cars = input("Enter car name: ")
+        Auto.insert(cars, 2)
+        print(Auto)
+    elif choise == 4:
+        print("Sort car")
+        Auto.sort(reverse=False)
+        print(Auto)
+    elif choise == 7:
+        cars = input("Enter car name to rename: ")
+        print(Auto)
+    else:
+        new_name = input("Enter new car name: ")
+        index = Auto.index(new_name)
+        Auto[index] = new_name
+    if choise == 0:
+        exit = 0
+        print("exit: ", exit)
