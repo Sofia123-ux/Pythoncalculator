@@ -1,0 +1,26 @@
+Auto = ["Toyota", "Audi","BMW",]
+choise =int(input("1. Add car\n2. Remove car\n3. Insert\n4. Sort\n5. Pop\n6. Reverse\n7. Rename\n"))
+print(f"Result = ", choise)
+if choise == 1:
+    print("Add car")
+    Choise = input("Enter car name: ")
+    Auto.append("Tesla")
+    print(Auto)
+
+elif choise == 2:
+    print("Remove car")
+    Choise = input("Enter car name: ")
+    Auto.remove("Toyota")
+    print(Auto)
+elif choise == 3:
+    print("Insert car")
+    Choise = input("Enter car name: ")
+    Auto.insert(2, "Tesla")
+    print(Auto)
+elif choise == 4:
+    print("Sort car")
+    Auto.sort(reverse=False)
+    print(Auto)
+elif choise == 7:
+    Auto = input("Enter car name to rename: ")
+    print(Auto)
