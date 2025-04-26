@@ -1,0 +1,33 @@
+import requests
+import argparse
+
+
+SWAPI_PEOPLE = "https://swapi.tech/api/people"
+
+result = requests.get(SWAPI_PEOPLE)
+
+data = result.json()
+
+print(type(data))
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-n", "--name", help="Display person datails.")
+parser.add_argument("-a", "--all", help="Show all person.",
+                    action='store_true')
+
+args = parser.parse_args()
+
+print(args)
+name = args.name
+all = args.all
+
+print("Name: ", name)
+print("All: ", all)
+if all == True and name != None:
+    print("Print table")
+    print("Name = ",name)
+    SINGLE_PERSON_URL = f"{SWAPI_PEOPLE}/3"
+    print(SINGLE_PERSON_URL)
+    single_person = requests.get(SINGLE_PERSON_URL)
+    single_person = single_person.json()
+    print("single person: ", single_person['result']['properties'])
